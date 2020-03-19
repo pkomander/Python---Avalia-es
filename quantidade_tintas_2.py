@@ -1,4 +1,4 @@
-def tintacustolata(calculo_lata, custo_tinta, calculo_galao, custo_galao):
+def tintacustolata(calculo_lata, custo_tinta, calculo_galao, custo_galao, soma):
     print('Em compras de latas de 18 litros')
     print(f'Deveram ser compradas ', '%.0f' % calculo_lata, 'latas de tinta')
     print(f'E o valor e de R$', '%.2f' % custo_tinta)
@@ -6,9 +6,8 @@ def tintacustolata(calculo_lata, custo_tinta, calculo_galao, custo_galao):
     print(f'Deveram ser compradas ','%.0f' % calculo_galao, 'galoes de tinta')
     print(f'E o valor e de R$', '%.2f' % custo_galao)
     print('Em compras de latas e galoes')
-    #print(f'Deveram ser compradas ', '%.0f' % mistura_lg, 'latas e ', '%.0f' % mistura_gl, 'galoes de tinta')
-    #print(f'E o valar e de ', '%.2f' % total_custo_mistura)
-    print(custo_mg)
+    print(f'Deveram ser compradas ', '%.0f' % mistura_lg, 'latas e ', '%.0f' % mistura_gl, 'galoes de tinta')
+    print(f'E o valar e de R$', '%.2f' % soma)
 
 
 
@@ -20,11 +19,11 @@ litro = 6
 
 #uma lata contem 18 litros
 latas = 18
-valor_lata = 80
+valor_lata = 80 * 0.10
 
 #um galão de tinta contem 3.6 litros
 galao = 3.6
-valor_galao = 25
+valor_galao = 25 * 0.10
 
 
 #metro quadrado da area
@@ -59,16 +58,20 @@ mistura_gl = calculo_galao / 2
 #desconto = total_custo * 0.10
 #total_custo_mistura = total_custo - desconto
 
+#if calculo_lata > int:
 
 
 
 
 
 
-custo_ml = custo_tinta * mistura_lg
-custo_mg = custo_galao * mistura_gl
+
+
+
+custo_ml = (custo_tinta * mistura_lg)
+custo_mg = (custo_galao * mistura_gl)
 soma = custo_ml + custo_mg
 
 
 
-tintacustolata(calculo_lata, custo_tinta, calculo_galao, custo_galao)
+tintacustolata(calculo_lata, custo_tinta, calculo_galao, custo_galao, soma)
